@@ -136,7 +136,7 @@
                 var mesh =  event.detail.loaderRootNode;
 
                 // apply translation matrix to change pivot point
-                mesh.applyMatrix( new THREE.Matrix4().makeTranslation( -150, -132, -108 ) );
+                mesh.applyMatrix( new THREE.Matrix4().makeTranslation( -128, -132, -108 ) );
 
                 var material = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
                 material.flatShading = false;
@@ -172,7 +172,7 @@
             var callbackOnLoadBrain = function ( event ) {
                 var mesh =  event.detail.loaderRootNode;
 
-                // apply translation matrix to change pivot point
+                // apply translation matrix to change pivot point ( -150, -132, -108 ) 
                 mesh.applyMatrix( new THREE.Matrix4().makeTranslation( -128, -132, -108 ) );
 
                 var material = new THREE.MeshLambertMaterial({color: 0xFF0000});
@@ -215,9 +215,11 @@
                 objLoaderBrain.load( 'brain.obj', callbackOnLoadBrain, null, null, null, false );
             };
             //objLoaderBrain.loadMtl( 'female02.mtl', null, onLoadMtlBrain );
-            objLoaderBrain.load( 'brainsmall.obj', callbackOnLoadBrain, null, null, null, false );
+            //objLoaderBrain.load( 'hiposmall.obj', callbackOnLoadBrain, null, null, null, false );
+            //objLoaderBrain.load( 'brainsmall.obj', callbackOnLoadBrain, null, null, null, false );
             //objLoaderHipo.load( 'hipocampus.obj', callbackOnLoadHipo, null, null, null, false );
-            objLoaderHipo.load( 'hiposmall.obj', callbackOnLoadHipo, null, null, null, false );
+            //objLoaderHipo.load( 'brainsmall.obj', callbackOnLoadHipo, null, null, null, false );
+            objLoaderHipo.load( '2hipos.obj', callbackOnLoadHipo, null, null, null, false );
         },
         _reportProgress: function( event ) {
           var output = THREE.LoaderSupport.Validator.verifyInput( event.detail.text, '' );
